@@ -59,13 +59,13 @@ namespace Image2Base64
             this.txtFilePath.MaxLength = 0;
             this.txtFilePath.Name = "txtFilePath";
             this.txtFilePath.ReadOnly = true;
-            this.txtFilePath.Size = new System.Drawing.Size(456, 22);
+            this.txtFilePath.Size = new System.Drawing.Size(600, 22);
             this.txtFilePath.TabIndex = 1;
             this.txtFilePath.TextChanged += new System.EventHandler(this.txtFilePath_TextChanged);
             // 
             // btnBrowse
             // 
-            this.btnBrowse.Location = new System.Drawing.Point(563, 19);
+            this.btnBrowse.Location = new System.Drawing.Point(708, 19);
             this.btnBrowse.Name = "btnBrowse";
             this.btnBrowse.Size = new System.Drawing.Size(75, 23);
             this.btnBrowse.TabIndex = 2;
@@ -79,7 +79,7 @@ namespace Image2Base64
             // 
             // btnProcess
             // 
-            this.btnProcess.Location = new System.Drawing.Point(656, 19);
+            this.btnProcess.Location = new System.Drawing.Point(801, 19);
             this.btnProcess.Name = "btnProcess";
             this.btnProcess.Size = new System.Drawing.Size(75, 23);
             this.btnProcess.TabIndex = 3;
@@ -91,7 +91,7 @@ namespace Image2Base64
             this.groupBox1.Controls.Add(this.dataGridView1);
             this.groupBox1.Location = new System.Drawing.Point(30, 65);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(701, 204);
+            this.groupBox1.Size = new System.Drawing.Size(885, 204);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Image Info";
@@ -111,7 +111,7 @@ namespace Image2Base64
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(689, 177);
+            this.dataGridView1.Size = new System.Drawing.Size(873, 177);
             this.dataGridView1.TabIndex = 6;
             // 
             // colName
@@ -145,7 +145,7 @@ namespace Image2Base64
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(766, 516);
+            this.ClientSize = new System.Drawing.Size(947, 516);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnProcess);
             this.Controls.Add(this.btnBrowse);
