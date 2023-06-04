@@ -57,7 +57,7 @@ namespace Image2Base64
 
                 dataGridView1.Rows.Clear();
                 dataGridView1.Rows.Add(new string[] { "Dimension", imgElement.GetImgDimension(), "Width x Height (pixels)" });
-                dataGridView1.Rows.Add(new string[] { "Extension", Path.GetExtension(openFileDialog1.FileName).Replace(".", "").ToUpper(), "" });
+                dataGridView1.Rows.Add(new string[] { "Extension", imgElement.GetExtension().ToUpper(), "" });
                 dataGridView1.Rows.Add(new string[] { "FileName", imgElement.GetFileName(), "without Path" });
                 dataGridView1.Rows.Add(new string[] { "Directory", imgElement.GetDirectory(), "" });
                 dataGridView1.Rows.Add(new string[] { "FullName", imgElement.GetFullName(), "" });
@@ -82,6 +82,57 @@ namespace Image2Base64
         {
             //Image image = Image.FromFile(@"C:\ArthroscopyImages\1.jpg");
             //var userComment = Encoding.UTF8.GetString(image.GetPropertyItem(0x9286).Value);
+
+            if (txtFilePath.Text.Trim() != "")
+            {
+                btnProcess.Enabled = true;
+            }
+            else
+            {
+                btnProcess.Enabled = false;
+            }
+        }
+
+        private void btnProcess_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Image = Image.FromFile(txtFilePath.Text);
+            txtBase64.Text = imgElement.GetBase64Format();
+        }
+
+        private void txtBase64_TextChanged(object sender, EventArgs e)
+        {
+            if (txtBase64.Text.Trim() != "")
+            {
+                txtLength.Text = imgElement.GetBase64OutputLength().ToString("N0");
+
+                btnReady2Use.Enabled = true;
+                btnCopyClipboard.Enabled = true;
+            }
+            else
+            {
+                txtLength.Text = "";
+
+                btnReady2Use.Enabled = false;
+                btnCopyClipboard.Enabled = false;
+            }
+        }
+
+        private void btnCopyClipboard_Click(object sender, EventArgs e)
+        {
+            if (txtBase64.Text.Trim() != "")
+            {
+                txtBase64.SelectAll();
+                txtBase64.Copy();
+            }
+        }
+
+        private void btnReady2Use_Click(object sender, EventArgs e)
+        {
+            if (txtBase64.Text.Trim() != "")
+            {
+                txtBase64.Text = "data:image/" + imgElement.GetExtension().ToLower() + ";base64," + txtBase64.Text;
+            }
+            
         }
     }
 }

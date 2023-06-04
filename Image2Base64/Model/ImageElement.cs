@@ -12,33 +12,39 @@ namespace Image2Base64.Model
     class ImageElement
     {
         private Image image;
-        private string imageFileName;
-        private string imageFilePath;
+        private string imageFullPath;
         private int imageWidth;
         private int imageHeight;
         private ImageFormat imageFormat;
         private FileInfo fi;
         private FileAttributes fa;
+        private string strBase64;
 
         public ImageElement()
         {
             image = null;
-            imageFileName = "";
-            imageFilePath = "";
+            imageFullPath = "";
             imageFormat = null;
             fi = null;
             //fa = null;
+            strBase64 = "";
         }
 
         public void SetImage(string pathFile)
         {
-            image = Image.FromFile(pathFile);
+            imageFullPath = pathFile;
+            image = Image.FromFile(imageFullPath);
             imageWidth = image.Width;
             imageHeight = image.Height;
             imageFormat = image.RawFormat;
 
-            fi = new FileInfo(pathFile);
-            fa = File.GetAttributes(pathFile);
+            fi = new FileInfo(imageFullPath);
+            fa = File.GetAttributes(imageFullPath);
+        }
+
+        public string GetExtension()
+        {
+            return Path.GetExtension(imageFullPath).Replace(".", "");
         }
 
         public int GetImgWidth()
@@ -156,6 +162,18 @@ namespace Image2Base64.Model
             }
 
             return bResult.ToString();
+        }
+
+        public string GetBase64Format()
+        {
+            byte[] imageArray = System.IO.File.ReadAllBytes(imageFullPath);
+            strBase64 = Convert.ToBase64String(imageArray);
+            return strBase64;
+        }
+
+        public long GetBase64OutputLength()
+        {
+            return (long)strBase64.Length;
         }
     }
 }
