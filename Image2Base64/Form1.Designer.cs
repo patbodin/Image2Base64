@@ -117,26 +117,29 @@ namespace Image2Base64
             // colName
             // 
             this.colName.HeaderText = "Name";
+            this.colName.MaxInputLength = 0;
             this.colName.MinimumWidth = 6;
             this.colName.Name = "colName";
             this.colName.ReadOnly = true;
-            this.colName.Width = 125;
+            this.colName.Width = 150;
             // 
             // colValue
             // 
             this.colValue.HeaderText = "Value";
+            this.colValue.MaxInputLength = 0;
             this.colValue.MinimumWidth = 6;
             this.colValue.Name = "colValue";
             this.colValue.ReadOnly = true;
-            this.colValue.Width = 125;
+            this.colValue.Width = 200;
             // 
             // colRemark
             // 
             this.colRemark.HeaderText = "Remark";
+            this.colRemark.MaxInputLength = 0;
             this.colRemark.MinimumWidth = 6;
             this.colRemark.Name = "colRemark";
             this.colRemark.ReadOnly = true;
-            this.colRemark.Width = 125;
+            this.colRemark.Width = 250;
             // 
             // Form1
             // 

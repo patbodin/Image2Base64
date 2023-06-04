@@ -47,8 +47,8 @@ namespace Image2Base64
 
                 imgElement = new ImageElement();
                 imgElement.SetImage(openFileDialog1.FileName);
-                txtImgDimension.Text = imgElement.GetImgDimension();
-                txtImgFormat.Text = Path.GetExtension(openFileDialog1.FileName).Replace(".", "").ToUpper();
+                //txtImgDimension.Text = imgElement.GetImgDimension();
+                //txtImgFormat.Text = Path.GetExtension(openFileDialog1.FileName).Replace(".", "").ToUpper();
 
                 dataGridView1.ColumnCount = 3;
                 dataGridView1.Rows.Add(new string[] { "Dimension", imgElement.GetImgDimension(), "Width x Height (pixels)" });
