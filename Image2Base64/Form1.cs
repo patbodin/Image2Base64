@@ -1,8 +1,11 @@
-﻿using System;
+﻿using Image2Base64.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,9 +15,12 @@ namespace Image2Base64
 {
     public partial class Form1 : Form
     {
+        ImageElement imgElement;
+
         public Form1()
         {
             InitializeComponent();
+            imgElement = null;
         }
 
         private void btnBrowse_Click(object sender, EventArgs e)
@@ -38,13 +44,18 @@ namespace Image2Base64
             if (fileResult == DialogResult.OK)
             {
                 txtFilePath.Text = openFileDialog1.FileName;
+
+                imgElement = new ImageElement();
+                imgElement.SetImage(openFileDialog1.FileName);
+                txtImgDimension.Text = imgElement.GetImgDimension();
+                txtImgFormat.Text = Path.GetExtension(openFileDialog1.FileName).Replace(".", "").ToUpper();
             }
         }
 
         private void txtFilePath_TextChanged(object sender, EventArgs e)
         {
-            Image image = Image.FromFile(@"C:\ArthroscopyImages\1.jpg");
-            var userComment = Encoding.UTF8.GetString(image.GetPropertyItem(0x9286).Value);
+            //Image image = Image.FromFile(@"C:\ArthroscopyImages\1.jpg");
+            //var userComment = Encoding.UTF8.GetString(image.GetPropertyItem(0x9286).Value);
         }
     }
 }

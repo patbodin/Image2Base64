@@ -36,7 +36,9 @@ namespace Image2Base64
             this.btnProcess = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtImgDimension = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtImgFormat = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -85,7 +87,9 @@ namespace Image2Base64
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtImgFormat);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.txtImgDimension);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(30, 65);
             this.groupBox1.Name = "groupBox1";
@@ -99,16 +103,32 @@ namespace Image2Base64
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(26, 35);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 17);
+            this.label2.Size = new System.Drawing.Size(111, 17);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Resolution XY";
+            this.label2.Text = "Dimension (WH)";
             // 
-            // textBox1
+            // txtImgDimension
             // 
-            this.textBox1.Location = new System.Drawing.Point(142, 32);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 1;
+            this.txtImgDimension.Location = new System.Drawing.Point(142, 32);
+            this.txtImgDimension.Name = "txtImgDimension";
+            this.txtImgDimension.Size = new System.Drawing.Size(100, 22);
+            this.txtImgDimension.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(26, 70);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(52, 17);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Format";
+            // 
+            // txtImgFormat
+            // 
+            this.txtImgFormat.Location = new System.Drawing.Point(142, 65);
+            this.txtImgFormat.Name = "txtImgFormat";
+            this.txtImgFormat.Size = new System.Drawing.Size(100, 22);
+            this.txtImgFormat.TabIndex = 3;
             // 
             // Form1
             // 
@@ -140,8 +160,10 @@ namespace Image2Base64
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Button btnProcess;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtImgDimension;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtImgFormat;
+        private System.Windows.Forms.Label label3;
     }
 }
 
