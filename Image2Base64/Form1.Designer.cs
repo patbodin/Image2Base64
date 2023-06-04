@@ -35,12 +35,6 @@ namespace Image2Base64
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.btnProcess = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtImgDimension = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtImgFormat = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtFileSize = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.colName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -95,69 +89,12 @@ namespace Image2Base64
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dataGridView1);
-            this.groupBox1.Controls.Add(this.txtFileSize);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.txtImgFormat);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.txtImgDimension);
-            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(30, 65);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(701, 204);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Image Info";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(26, 35);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(115, 17);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Dimension (WH):";
-            // 
-            // txtImgDimension
-            // 
-            this.txtImgDimension.Location = new System.Drawing.Point(142, 32);
-            this.txtImgDimension.MaxLength = 0;
-            this.txtImgDimension.Name = "txtImgDimension";
-            this.txtImgDimension.Size = new System.Drawing.Size(100, 22);
-            this.txtImgDimension.TabIndex = 1;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(26, 70);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 17);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Format:";
-            // 
-            // txtImgFormat
-            // 
-            this.txtImgFormat.Location = new System.Drawing.Point(142, 65);
-            this.txtImgFormat.MaxLength = 0;
-            this.txtImgFormat.Name = "txtImgFormat";
-            this.txtImgFormat.Size = new System.Drawing.Size(100, 22);
-            this.txtImgFormat.TabIndex = 3;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(26, 103);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 17);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "FileSize:";
-            // 
-            // txtFileSize
-            // 
-            this.txtFileSize.Location = new System.Drawing.Point(142, 100);
-            this.txtFileSize.MaxLength = 0;
-            this.txtFileSize.Name = "txtFileSize";
-            this.txtFileSize.Size = new System.Drawing.Size(100, 22);
-            this.txtFileSize.TabIndex = 5;
             // 
             // dataGridView1
             // 
@@ -169,12 +106,12 @@ namespace Image2Base64
             this.colName,
             this.colValue,
             this.colRemark});
-            this.dataGridView1.Location = new System.Drawing.Point(279, 21);
+            this.dataGridView1.Location = new System.Drawing.Point(6, 21);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(402, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(689, 177);
             this.dataGridView1.TabIndex = 6;
             // 
             // colName
@@ -217,7 +154,6 @@ namespace Image2Base64
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Image2Base64";
             this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -232,12 +168,6 @@ namespace Image2Base64
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Button btnProcess;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtImgDimension;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtImgFormat;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtFileSize;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn colName;
         private System.Windows.Forms.DataGridViewTextBoxColumn colValue;
