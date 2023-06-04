@@ -29,11 +29,11 @@ namespace Image2Base64
 
             openFileDialog1.Title = "Browse Image File";
             openFileDialog1.InitialDirectory = @"C:\";
-            openFileDialog1.Filter = @"JPG (*.jpg, *.jpeg)|*.jpg;*.jpeg
-                                        |PNG (*.png)|*.png
-                                        |GIF (*.gif)|*.gif
-                                        |TIFF (*.tif, *.tiff)|*.tif;*.tiff
-                                        |All files (*.jpg,*.jpeg,*.png,*.gif,*.tif,*.tiff)|*.jpg;*.jpeg;*.png;*.gif;*.tif;*.tiff";
+            openFileDialog1.Filter = @"JPG (*.jpg, *.jpeg)|*.jpg;*.jpeg;
+                                        |PNG (*.png)|*.png;
+                                        |GIF (*.gif)|*.gif;
+                                        |TIFF (*.tif, *.tiff)|*.tif;*.tiff;
+                                        |All files (*.jpg,*.jpeg,*.png,*.gif,*.tif,*.tiff)|*.jpg;*.jpeg;*.png;*.gif;*.tif;*.tiff;";
             openFileDialog1.CheckFileExists = true;
             openFileDialog1.CheckPathExists = true;
             openFileDialog1.RestoreDirectory = true;
