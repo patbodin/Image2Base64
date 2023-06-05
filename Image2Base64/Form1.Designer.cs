@@ -29,6 +29,7 @@ namespace Image2Base64
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
             this.txtFilePath = new System.Windows.Forms.TextBox();
@@ -47,9 +48,13 @@ namespace Image2Base64
             this.txtLength = new System.Windows.Forms.TextBox();
             this.btnReady2Use = new System.Windows.Forms.Button();
             this.btnCopyClipboard = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -65,19 +70,20 @@ namespace Image2Base64
             // txtFilePath
             // 
             this.txtFilePath.BackColor = System.Drawing.SystemColors.Window;
+            this.txtFilePath.ContextMenuStrip = this.contextMenuStrip1;
             this.txtFilePath.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txtFilePath.Location = new System.Drawing.Point(97, 19);
             this.txtFilePath.MaxLength = 0;
             this.txtFilePath.Name = "txtFilePath";
             this.txtFilePath.ReadOnly = true;
-            this.txtFilePath.Size = new System.Drawing.Size(582, 26);
+            this.txtFilePath.Size = new System.Drawing.Size(555, 26);
             this.txtFilePath.TabIndex = 1;
             this.txtFilePath.TextChanged += new System.EventHandler(this.txtFilePath_TextChanged);
             // 
             // btnBrowse
             // 
             this.btnBrowse.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.btnBrowse.Location = new System.Drawing.Point(708, 17);
+            this.btnBrowse.Location = new System.Drawing.Point(726, 17);
             this.btnBrowse.Name = "btnBrowse";
             this.btnBrowse.Size = new System.Drawing.Size(89, 30);
             this.btnBrowse.TabIndex = 2;
@@ -93,7 +99,7 @@ namespace Image2Base64
             // 
             this.btnProcess.Enabled = false;
             this.btnProcess.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.btnProcess.Location = new System.Drawing.Point(814, 17);
+            this.btnProcess.Location = new System.Drawing.Point(821, 17);
             this.btnProcess.Name = "btnProcess";
             this.btnProcess.Size = new System.Drawing.Size(95, 30);
             this.btnProcess.TabIndex = 3;
@@ -235,11 +241,38 @@ namespace Image2Base64
             this.btnCopyClipboard.UseVisualStyleBackColor = true;
             this.btnCopyClipboard.Click += new System.EventHandler(this.btnCopyClipboard_Click);
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(660, 22);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(58, 21);
+            this.checkBox1.TabIndex = 12;
+            this.checkBox1.Text = "URL";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 56);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(210, 24);
+            this.toolStripMenuItem1.Text = "ClearAll";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(947, 528);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.btnCopyClipboard);
             this.Controls.Add(this.btnReady2Use);
             this.Controls.Add(this.txtLength);
@@ -261,6 +294,7 @@ namespace Image2Base64
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -285,6 +319,9 @@ namespace Image2Base64
         private System.Windows.Forms.TextBox txtLength;
         private System.Windows.Forms.Button btnReady2Use;
         private System.Windows.Forms.Button btnCopyClipboard;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
     }
 }
 
